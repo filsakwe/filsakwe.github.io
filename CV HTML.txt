@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AKWE ASSOUMOU Fils — Ingénieur Industriel</title>
+<meta name="description" content="Portfolio d'AKWE ASSOUMOU Fils Gilbert-Kayetan, Ingénieur Industriel spécialisé en maintenance et supply chain.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0F1B1E;
+  --bg-grad:#0C1517;
+  --panel:#152528;
+  --panel-2:#1B2D31;
+  --line:#2B3F44;
+  --line-soft:#1F3338;
+  --text:#ECE7DC;
+  --text-dim:#9FB1AC;
+  --text-faint:#6C7E7A;
+  --amber:#F2A93B;
+  --cyan:#56C7D8;
+  --green:#7BC97E;
+  --grey:#7C8B88;
+  --mono:'IBM Plex Mono',monospace;
+  --display:'Space Grotesk',sans-serif;
+  --body:'IBM Plex Sans',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--body);
+  line-height:1.6;
+  overflow-x:hidden;
+  background-image:
+    linear-gradient(var(--line-soft) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line-soft) 1px, transparent 1px);
+  background-size:42px 42px;
+  background-attachment:fixed;
+  background-position:-1px -1px;
+}
+a{color:inherit;text-decoration:none;}
+img{display:block;max-width:100%;}
+.wrap{max-width:1140px;margin:0 auto;padding:0 28px;}
+.eyebrow{
+  font-family:var(--mono);
+  font-size:.72rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--amber);
+  display:flex;align-items:center;gap:10px;
+  margin-bottom:14px;
+}
+.eyebrow::before{content:"";width:18px;height:1px;background:var(--amber);display:inline-block;}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.15;letter-spacing:-0.01em;}
+section{position:relative;padding:96px 0;}
+section + section{border-top:1px solid var(--line);}
+.section-head{max-width:640px;margin-bottom:48px;}
+.section-head h2{font-size:clamp(1.7rem,3vw,2.3rem);color:var(--text);}
+.section-head p{color:var(--text-dim);margin-top:12px;font-size:1.02rem;}
+
+/* corner bracket signature element */
+.corner-frame{position:relative;}
+.corner-frame::before,.corner-frame::after{
+  content:"";position:absolute;width:14px;height:14px;
+  border:1.5px solid var(--cyan);opacity:.55;pointer-events:none;
+}
+.corner-frame::before{top:-1px;left:-1px;border-right:none;border-bottom:none;}
+.corner-frame::after{bottom:-1px;right:-1px;border-left:none;border-top:none;}
+
+/* ---------- NAV ---------- */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(12,21,23,.86);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+nav{display:flex;align-items:center;justify-content:space-between;padding:16px 28px;max-width:1140px;margin:0 auto;}
+.logo{font-family:var(--mono);font-size:.95rem;letter-spacing:.06em;color:var(--text);display:flex;align-items:center;gap:8px;}
+.logo .dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green);}
+.nav-links{display:flex;gap:32px;font-family:var(--mono);font-size:.78rem;letter-spacing:.04em;text-transform:uppercase;}
+.nav-links a{color:var(--text-dim);transition:color .2s;}
+.nav-links a:hover{color:var(--amber);}
+.nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;}
+.nav-toggle span{width:22px;height:2px;background:var(--text);display:block;}
+@media (max-width:840px){
+  .nav-links{
+    position:absolute;top:100%;left:0;right:0;
+    flex-direction:column;background:var(--panel);
+    padding:18px 28px;gap:18px;border-bottom:1px solid var(--line);
+    display:none;
+  }
+  .nav-links.open{display:flex;}
+  .nav-toggle{display:flex;}
+}
+
+/* ---------- HERO ---------- */
+.hero{padding-top:170px;padding-bottom:90px;}
+.hero-grid{display:grid;grid-template-columns:1.25fr .85fr;gap:56px;align-items:start;}
+@media (max-width:840px){.hero-grid{grid-template-columns:1fr;}}
+.hero h1{font-size:clamp(2.1rem,4.4vw,3.4rem);margin-bottom:10px;}
+.hero .role{font-family:var(--mono);color:var(--cyan);font-size:1.05rem;letter-spacing:.03em;margin-bottom:22px;}
+.hero p.lede{color:var(--text-dim);font-size:1.08rem;max-width:560px;margin-bottom:34px;}
+.btn-row{display:flex;gap:14px;flex-wrap:wrap;}
+.btn{
+  font-family:var(--mono);font-size:.82rem;letter-spacing:.04em;text-transform:uppercase;
+  padding:13px 22px;border:1px solid var(--text);transition:all .2s;display:inline-flex;align-items:center;gap:8px;
+}
+.btn-primary{background:var(--amber);border-color:var(--amber);color:#1A1308;}
+.btn-primary:hover{background:#ffbe5a;}
+.btn-ghost{color:var(--text);border-color:var(--line);}
+.btn-ghost:hover{border-color:var(--cyan);color:var(--cyan);}
+
+.stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:54px;border-top:1px solid var(--line);}
+.stat{padding:18px 18px 0 0;border-right:1px solid var(--line);}
+.stat:last-child{border-right:none;}
+.stat .num{font-family:var(--mono);font-size:1.6rem;color:var(--amber);}
+.stat .lbl{font-family:var(--mono);font-size:.68rem;color:var(--text-faint);text-transform:uppercase;letter-spacing:.05em;margin-top:4px;}
+@media (max-width:600px){.stat-row{grid-template-columns:repeat(2,1fr);}}
+
+/* nameplate */
+.nameplate{
+  background:var(--panel);border:1px solid var(--line);padding:26px 26px 22px;
+}
+.nameplate .photo-wrap{
+  width:100%;aspect-ratio:1/1;overflow:hidden;border:1px solid var(--line);margin-bottom:20px;background:#0c1517;
+}
+.nameplate .photo-wrap img{width:100%;height:100%;object-fit:cover;filter:saturate(.92) contrast(1.04);}
+.plate-title{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--text-faint);border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:14px;display:flex;justify-content:space-between;}
+.plate-row{display:flex;justify-content:space-between;gap:10px;padding:7px 0;font-family:var(--mono);font-size:.78rem;border-bottom:1px dashed var(--line-soft);}
+.plate-row:last-child{border-bottom:none;}
+.plate-row .k{color:var(--text-faint);}
+.plate-row .v{color:var(--text);text-align:right;}
+
+/* ---------- ABOUT ---------- */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;}
+@media (max-width:840px){.about-grid{grid-template-columns:1fr;}}
+.about-grid p{color:var(--text-dim);margin-bottom:16px;}
+.tag-cloud{display:flex;flex-wrap:wrap;gap:9px;margin-top:6px;}
+.tag{
+  font-family:var(--mono);font-size:.74rem;letter-spacing:.02em;
+  border:1px solid var(--line);padding:7px 12px;color:var(--text-dim);
+  transition:border-color .2s,color .2s;
+}
+.tag.cyan{border-color:rgba(86,199,216,.4);color:var(--cyan);}
+.tag.amber{border-color:rgba(242,169,59,.4);color:var(--amber);}
+
+/* ---------- EXPERIENCE / PIPELINE ---------- */
+.timeline{position:relative;padding-left:38px;}
+.timeline::before{
+  content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;
+  background:repeating-linear-gradient(180deg,var(--line) 0 8px, transparent 8px 14px);
+}
+.t-item{position:relative;padding-bottom:46px;}
+.t-item:last-child{padding-bottom:0;}
+.t-node{
+  position:absolute;left:-38px;top:4px;width:18px;height:18px;border-radius:50%;
+  background:var(--bg);border:2px solid var(--grey);display:flex;align-items:center;justify-content:center;
+}
+.t-node::after{content:"";width:6px;height:6px;border-radius:50%;background:var(--grey);}
+.t-item.active .t-node{border-color:var(--green);}
+.t-item.active .t-node::after{background:var(--green);box-shadow:0 0 6px var(--green);}
+.t-card{
+  background:var(--panel);border:1px solid var(--line);padding:24px 26px;
+}
+.t-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;align-items:flex-start;margin-bottom:4px;}
+.t-org{font-family:var(--display);font-size:1.15rem;color:var(--text);}
+.t-role{font-family:var(--mono);color:var(--cyan);font-size:.85rem;margin-top:3px;}
+.t-meta{font-family:var(--mono);font-size:.72rem;color:var(--text-faint);text-align:right;}
+.status{
+  font-family:var(--mono);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;
+  padding:4px 9px;border:1px solid;white-space:nowrap;
+}
+.status.active{color:var(--green);border-color:var(--green);background:rgba(123,201,126,.08);}
+.status.archived{color:var(--grey);border-color:var(--grey);background:rgba(124,139,136,.08);}
+.t-bullets{margin-top:14px;color:var(--text-dim);font-size:.92rem;}
+.t-bullets li{margin-bottom:7px;padding-left:16px;position:relative;}
+.t-bullets li::before{content:"›";position:absolute;left:0;color:var(--amber);}
+.duration{display:flex;align-items:center;gap:10px;margin-top:16px;}
+.duration .bar{height:6px;border:1px solid var(--line);flex:0 0 auto;background:repeating-linear-gradient(90deg,var(--amber) 0 3px, transparent 3px 6px);}
+.duration .dlabel{font-family:var(--mono);font-size:.68rem;color:var(--text-faint);}
+
+/* ---------- ACHIEVEMENTS ---------- */
+.ach-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+@media (max-width:900px){.ach-grid{grid-template-columns:1fr;}}
+.ach-card{background:var(--panel);border:1px solid var(--line);padding:28px 24px;position:relative;}
+.ach-num{font-family:var(--mono);font-size:2.4rem;color:var(--amber);line-height:1;}
+.ach-card h3{font-size:1rem;color:var(--text);margin:14px 0 8px;}
+.ach-card p{color:var(--text-dim);font-size:.88rem;}
+.ach-org{font-family:var(--mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:var(--text-faint);margin-top:14px;border-top:1px dashed var(--line-soft);padding-top:12px;}
+.ach-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;}
+.ach-chip{font-family:var(--mono);font-size:.68rem;border:1px solid var(--line);padding:4px 8px;color:var(--text-dim);}
+
+/* ---------- SKILLS ---------- */
+.skill-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;}
+@media (max-width:840px){.skill-cols{grid-template-columns:1fr;}}
+.skill-col h3{font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-faint);margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--line);}
+.badge-grid{display:flex;flex-wrap:wrap;gap:10px;}
+.badge{
+  width:64px;height:54px;border:1px solid var(--line);background:var(--panel-2);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;
+  font-family:var(--mono);
+}
+.badge .led{width:5px;height:5px;border-radius:50%;background:var(--cyan);box-shadow:0 0 5px var(--cyan);}
+.badge .lbl{font-size:.62rem;color:var(--text-dim);letter-spacing:.02em;}
+
+/* ---------- LANGUAGES ---------- */
+.lang-row{display:flex;justify-content:space-between;font-family:var(--mono);font-size:.8rem;margin-bottom:8px;}
+.lang-bar-bg{height:8px;background:var(--panel-2);border:1px solid var(--line);margin-bottom:22px;}
+.lang-bar-fill{height:100%;background:var(--cyan);}
+
+/* ---------- FORMATION / CERTS ---------- */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:48px;}
+@media (max-width:840px){.split{grid-template-columns:1fr;}}
+.cert-list{list-style:none;}
+.cert-list li{
+  display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--line-soft);align-items:flex-start;
+}
+.cert-list li:first-child{border-top:1px solid var(--line-soft);}
+.cert-stamp{font-family:var(--mono);font-size:.66rem;color:var(--amber);border:1px solid var(--amber);padding:3px 6px;flex:0 0 auto;margin-top:2px;}
+.cert-name{color:var(--text);font-size:.93rem;}
+.cert-issuer{color:var(--text-faint);font-size:.78rem;font-family:var(--mono);margin-top:2px;}
+
+.edu-item{margin-bottom:26px;padding-bottom:22px;border-bottom:1px solid var(--line-soft);}
+.edu-item:last-child{border-bottom:none;margin-bottom:0;}
+.edu-school{font-family:var(--display);font-size:1.1rem;color:var(--text);}
+.edu-loc{font-family:var(--mono);font-size:.72rem;color:var(--text-faint);margin-top:2px;}
+.edu-deg{display:flex;justify-content:space-between;gap:10px;margin-top:12px;font-size:.92rem;color:var(--text-dim);}
+.edu-deg .yr{font-family:var(--mono);font-size:.78rem;color:var(--text-faint);white-space:nowrap;}
+
+/* ---------- CONTACT ---------- */
+.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;}
+@media (max-width:840px){.contact-grid{grid-template-columns:1fr;}}
+.contact-list a, .contact-list div{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:16px 0;border-bottom:1px solid var(--line-soft);font-family:var(--mono);font-size:.88rem;
+  transition:color .2s;
+}
+.contact-list a:hover{color:var(--cyan);}
+.contact-list .k{color:var(--text-faint);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;}
+.note-box{background:var(--panel);border:1px solid var(--line);padding:22px;font-size:.85rem;color:var(--text-dim);}
+.note-box strong{color:var(--text);}
+
+footer{padding:34px 0;border-top:1px solid var(--line);}
+.foot-row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-family:var(--mono);font-size:.72rem;color:var(--text-faint);}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease;}
+.reveal.show{opacity:1;transform:translateY(0);}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none;}}
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo"><span class="dot"></span>AAFGK — GÉNIE INDUSTRIEL</div>
+    <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+    <div class="nav-links" id="navLinks">
+      <a href="#profil">Profil</a>
+      <a href="#experience">Expérience</a>
+      <a href="#realisations">Réalisations</a>
+      <a href="#competences">Compétences</a>
+      <a href="#formation">Formation</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Fiche de poste — Ingénieur Industriel</div>
+      <h1>AKWE ASSOUMOU Fils<br>Gilbert‑Kayetan</h1>
+      <div class="role">Maintenance Industrielle &amp; Supply Chain</div>
+      <p class="lede">J'interviens sur la chaîne de valeur industrielle — des ateliers de maintenance aux services contrats &amp; approvisionnements — en m'appuyant sur l'analyse de données pour fiabiliser les opérations et créer de la valeur.</p>
+      <div class="btn-row">
+        <a href="#experience" class="btn btn-primary">Voir le parcours</a>
+        <a href="#contact" class="btn btn-ghost">Me contacter</a>
+      </div>
+      <div class="stat-row">
+        <div class="stat"><div class="num">05</div><div class="lbl">Expériences</div></div>
+        <div class="stat"><div class="num">02</div><div class="lbl">Pays</div></div>
+        <div class="stat"><div class="num">06</div><div class="lbl">Certifications</div></div>
+        <div class="stat"><div class="num">08</div><div class="lbl">Outils maîtrisés</div></div>
+      </div>
+    </div>
+
+    <div class="nameplate corner-frame">
+      <div class="photo-wrap"><img src="data:image/jpeg;base64,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" alt="Photo d'AKWE ASSOUMOU Fils"></div>
+      <div class="plate-title"><span>Fiche signalétique</span><span>FR / EN</span></div>
+      <div class="plate-row"><span class="k">Référence PNPE</span><span class="v">D27464‑2025‑G3</span></div>
+      <div class="plate-row"><span class="k">Base</span><span class="v">Port‑Gentil, Gabon</span></div>
+      <div class="plate-row"><span class="k">Secteurs</span><span class="v">Énergie · Mines · Logistique</span></div>
+      <div class="plate-row"><span class="k">Diplôme</span><span class="v">Ing. Génie Industriel — ESTEM</span></div>
+      <div class="plate-row"><span class="k">Langues</span><span class="v">FR courant · EN intermédiaire</span></div>
+      <div class="plate-row"><span class="k">Statut</span><span class="v" style="color:var(--green)">En poste — Assala Gabon</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="profil">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">01 — Profil</div>
+      <h2>Du terrain à la donnée</h2>
+    </div>
+    <div class="about-grid">
+      <div class="reveal">
+        <p>Fort d'une expérience en maintenance et supply chain, je m'appuie sur l'analyse des données et ma connaissance des opérations industrielles pour améliorer la performance et créer de la valeur.</p>
+        <p>Mon parcours s'est construit sur le terrain — supervision de travaux de maintenance, réorganisation d'entrepôts, gestion de contrats et d'approvisionnements — dans des environnements industriels exigeants au Gabon et au Maroc : énergie, mines, logistique et BTP.</p>
+        <p>Je suis aujourd'hui Analyste contrats chez Assala Gabon, où j'interviens sur les stratégies contractuelles, les appels d'offres et la cartographie des processus du service Contrats &amp; Approvisionnements.</p>
+      </div>
+      <div class="reveal">
+        <h3 style="font-size:.95rem;color:var(--text-faint);font-family:var(--mono);text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px;">Savoir‑être</h3>
+        <div class="tag-cloud">
+          <span class="tag cyan">Adaptabilité</span>
+          <span class="tag cyan">Autonomie</span>
+          <span class="tag cyan">Esprit d'analyse</span>
+          <span class="tag cyan">Organisation</span>
+          <span class="tag cyan">Rigueur</span>
+          <span class="tag cyan">Travail en équipe</span>
+        </div>
+        <h3 style="font-size:.95rem;color:var(--text-faint);font-family:var(--mono);text-transform:uppercase;letter-spacing:.08em;margin:28px 0 14px;">Expertises techniques</h3>
+        <div class="tag-cloud">
+          <span class="tag amber">Analyse de données</span>
+          <span class="tag amber">Coordination des travaux</span>
+          <span class="tag amber">Diagnostic &amp; résolution de problèmes</span>
+          <span class="tag amber">Gestion des contrats &amp; fournisseurs</span>
+          <span class="tag amber">Maintenance préventive &amp; corrective</span>
+          <span class="tag amber">Rédaction de cahiers des charges</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">02 — Expérience</div>
+      <h2>Ligne de parcours</h2>
+      <p>Cinq postes, deux pays, une même logique : fiabiliser les opérations et structurer la donnée.</p>
+    </div>
+
+    <div class="timeline">
+
+      <div class="t-item active reveal">
+        <div class="t-node"></div>
+        <div class="t-card">
+          <div class="t-head">
+            <div>
+              <div class="t-org">ASSALA GABON</div>
+              <div class="t-role">Analyste contrats (Contrat PNPE)</div>
+            </div>
+            <div>
+              <div class="status active">En service</div>
+              <div class="t-meta">Port‑Gentil, Gabon</div>
+            </div>
+          </div>
+          <ul class="t-bullets">
+            <li>Définir et déployer les stratégies contractuelles avec les clients internes (appel d'offres, négociation, extension, gestion budgétaire).</li>
+            <li>Challenger les cahiers des charges, lancer les appels d'offres et réaliser les évaluations commerciales des offres.</li>
+            <li>Enregistrer les nouveaux prestataires dans le système d'information.</li>
+            <li>Réaliser les cartographies des processus du service contrats et approvisionnements.</li>
+            <li>Référent sur les outils du service : Excel, GateKeeper, Power BI, SharePoint et SAP MM.</li>
+          </ul>
+          <div class="duration">
+            <div class="bar" style="width:60px"></div>
+            <span class="dlabel">Sept. 2025 — Présent · 9 mois</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="t-item reveal">
+        <div class="t-node"></div>
+        <div class="t-card">
+          <div class="t-head">
+            <div>
+              <div class="t-org">COMILOG</div>
+              <div class="t-role">Superviseur de travaux de maintenance (Stage PFE)</div>
+            </div>
+            <div>
+              <div class="status archived">Archivé</div>
+              <div class="t-meta">Moanda, Gabon</div>
+            </div>
+          </div>
+          <ul class="t-bullets">
+            <li>Superviser les travaux de maintenance (mécanique, chaudronnerie, soudure) et suivre la performance des équipements.</li>
+            <li>Garantir la conformité HSE et coordonner les interventions avec le magasin, les méthodes, les techniciens et les prestataires.</li>
+            <li>Améliorer de 3% la disponibilité du scalpeur à minerai Metso grâce à la planification des pièces de rechange et un nouveau plan de maintenance.</li>
+          </ul>
+          <div class="duration">
+            <div class="bar" style="width:34px"></div>
+            <span class="dlabel">Mars — Août 2025 · 5 mois</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="t-item reveal">
+        <div class="t-node"></div>
+        <div class="t-card">
+          <div class="t-head">
+            <div>
+              <div class="t-org">ISODEL MAROC</div>
+              <div class="t-role">Technicien logistique (Alternance)</div>
+            </div>
+            <div>
+              <div class="status archived">Archivé</div>
+              <div class="t-meta">Casablanca, Maroc</div>
+            </div>
+          </div>
+          <ul class="t-bullets">
+            <li>Mettre en place la méthode First‑In‑First‑Out pour réorganiser un entrepôt de plus de 1 000 références.</li>
+            <li>Coordonner l'inventaire général : vérification des données ERP, validation des fiches d'inventaire, identification des articles hors stock et des stocks dormants.</li>
+            <li>Participer à la planification des approvisionnements.</li>
+          </ul>
+          <div class="duration">
+            <div class="bar" style="width:60px"></div>
+            <span class="dlabel">Nov. 2023 — Juil. 2024 · 9 mois</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="t-item reveal">
+        <div class="t-node"></div>
+        <div class="t-card">
+          <div class="t-head">
+            <div>
+              <div class="t-org">SINASTONE</div>
+              <div class="t-role">Technicien de maintenance mécanique (Stage)</div>
+            </div>
+            <div>
+              <div class="status archived">Archivé</div>
+              <div class="t-meta">Casablanca, Maroc</div>
+            </div>
+          </div>
+          <ul class="t-bullets">
+            <li>Réaliser les interventions de maintenance corrective et préventive de niveau 2.</li>
+            <li>Effectuer des rondes de maintenance pour remonter les anomalies.</li>
+            <li>Assurer le remplacement des lames des châssis découpe‑marbre SFERA 80 TF1.</li>
+          </ul>
+          <div class="duration">
+            <div class="bar" style="width:20px"></div>
+            <span class="dlabel">Août — Oct. 2023 · 3 mois</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="t-item reveal">
+        <div class="t-node"></div>
+        <div class="t-card">
+          <div class="t-head">
+            <div>
+              <div class="t-org">GÉOMATIQUE MAROCCHI</div>
+              <div class="t-role">Dessinateur‑projeteur (Stage)</div>
+            </div>
+            <div>
+              <div class="status archived">Archivé</div>
+              <div class="t-meta">Casablanca, Maroc</div>
+            </div>
+          </div>
+          <ul class="t-bullets">
+            <li>Réaliser des levés topographiques sur le terrain (station totale et théodolite).</li>
+            <li>Collecter les données des ouvrages et produire des plans techniques : synoptique, plans cotés et plans de voirie via AutoCAD, Covadis et Topogen.</li>
+            <li>Contribuer à la préparation et à la mise à jour des documents techniques pour les études et le suivi des projets.</li>
+          </ul>
+          <div class="duration">
+            <div class="bar" style="width:20px"></div>
+            <span class="dlabel">Août — Oct. 2022 · 3 mois</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="realisations">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">03 — Réalisations</div>
+      <h2>Impacts mesurés sur le terrain</h2>
+    </div>
+    <div class="ach-grid">
+      <div class="ach-card corner-frame reveal">
+        <div class="ach-num">+3%</div>
+        <h3>Disponibilité du scalpeur à minerai Metso</h3>
+        <p>Planification des commandes de pièces de rechange et mise en place d'un plan de maintenance structuré.</p>
+        <div class="ach-org">COMILOG · Stage PFE</div>
+      </div>
+      <div class="ach-card corner-frame reveal">
+        <div class="ach-num">1000+</div>
+        <h3>Références d'entrepôt réorganisées en FIFO</h3>
+        <p>Déploiement de la méthode First‑In‑First‑Out et coordination de l'inventaire général sur données ERP.</p>
+        <div class="ach-org">ISODEL MAROC · Alternance</div>
+      </div>
+      <div class="ach-card corner-frame reveal">
+        <h3 style="margin-top:0">Référent outils &amp; processus</h3>
+        <p>Cartographie des processus du service Contrats &amp; Approvisionnements et point de référence sur les outils clés de l'équipe.</p>
+        <div class="ach-chips">
+          <span class="ach-chip">Excel</span>
+          <span class="ach-chip">GateKeeper</span>
+          <span class="ach-chip">Power BI</span>
+          <span class="ach-chip">SharePoint</span>
+          <span class="ach-chip">SAP MM</span>
+        </div>
+        <div class="ach-org">ASSALA GABON · Analyste contrats</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="competences">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">04 — Compétences</div>
+      <h2>Panneau d'instruments</h2>
+      <p>Les logiciels et méthodes mobilisés au quotidien, du diagnostic terrain à la décision.</p>
+    </div>
+    <div class="skill-cols">
+      <div class="skill-col reveal">
+        <h3>Logiciels</h3>
+        <div class="badge-grid">
+          <div class="badge"><span class="led"></span><span class="lbl">ACAD</span></div>
+          <div class="badge"><span class="led"></span><span class="lbl">XL/VBA</span></div>
+          <div class="badge"><span class="led"></span><span class="lbl">MATLAB</span></div>
+          <div class="badge"><span class="led"></span><span class="lbl">MS PROJ</span></div>
+          <div class="badge"><span class="led"></span><span class="lbl">POWER BI</span></div>
+          <div class="badge"><span class="led"></span><span class="lbl">PYTHON</span></div>
+          <div class="badge"><span class="led"></span><span class="lbl">SAP MM</span></div>
+          <div class="badge"><span class="led"></span><span class="lbl">SOLIDWKS</span></div>
+        </div>
+      </div>
+      <div class="skill-col reveal">
+        <h3>Techniques</h3>
+        <div class="tag-cloud">
+          <span class="tag amber">Analyse de données</span>
+          <span class="tag amber">Coordination des travaux</span>
+          <span class="tag amber">Diagnostic &amp; résolution de problèmes</span>
+          <span class="tag amber">Gestion des contrats &amp; fournisseurs</span>
+          <span class="tag amber">Maintenance préventive &amp; corrective</span>
+          <span class="tag amber">Rédaction de cahiers des charges</span>
+        </div>
+      </div>
+      <div class="skill-col reveal">
+        <h3>Langues</h3>
+        <div class="lang-row"><span>Français</span><span>Courant</span></div>
+        <div class="lang-bar-bg"><div class="lang-bar-fill" style="width:95%"></div></div>
+        <div class="lang-row"><span>Anglais</span><span>Intermédiaire</span></div>
+        <div class="lang-bar-bg"><div class="lang-bar-fill" style="width:60%"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="formation">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">05 — Formation &amp; certifications</div>
+      <h2>Socle académique</h2>
+    </div>
+    <div class="split">
+      <div class="reveal">
+        <h3 style="font-size:.95rem;color:var(--text-faint);font-family:var(--mono);text-transform:uppercase;letter-spacing:.08em;margin-bottom:18px;">Diplômes</h3>
+        <div class="edu-item">
+          <div class="edu-school">ESTEM</div>
+          <div class="edu-loc">Casablanca, Maroc</div>
+          <div class="edu-deg"><span>Diplôme d'ingénieur d'État en Génie Industriel</span><span class="yr">2022—2025</span></div>
+          <div class="edu-deg"><span>Classes préparatoires</span><span class="yr">2020—2022</span></div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-school">Collège &amp; Lycée Sainte‑Marie</div>
+          <div class="edu-loc">Libreville, Gabon</div>
+          <div class="edu-deg"><span>Baccalauréat D — Mathématiques et Sciences Naturelles</span><span class="yr">2020</span></div>
+        </div>
+      </div>
+      <div class="reveal">
+        <h3 style="font-size:.95rem;color:var(--text-faint);font-family:var(--mono);text-transform:uppercase;letter-spacing:.08em;margin-bottom:18px;">Certifications</h3>
+        <ul class="cert-list">
+          <li><span class="cert-stamp">CERT</span><div><div class="cert-name">Lean Six Sigma White Belt</div><div class="cert-issuer">CSSC</div></div></li>
+          <li><span class="cert-stamp">CERT</span><div><div class="cert-name">Project Management Foundations</div><div class="cert-issuer">LinkedIn Learning</div></div></li>
+          <li><span class="cert-stamp">CERT</span><div><div class="cert-name">Gestion de la maintenance industrielle</div><div class="cert-issuer">CESI</div></div></li>
+          <li><span class="cert-stamp">CERT</span><div><div class="cert-name">Excellence opérationnelle</div><div class="cert-issuer">ESSEC</div></div></li>
+          <li><span class="cert-stamp">CERT</span><div><div class="cert-name">Excel / VBA avancé</div><div class="cert-issuer">LinkedIn Learning</div></div></li>
+          <li><span class="cert-stamp">CERT</span><div><div class="cert-name">Well Planning</div><div class="cert-issuer">IHRDC</div></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">06 — Contact</div>
+      <h2>Disponible pour de nouvelles missions</h2>
+      <p>Basé à Port‑Gentil, Gabon — ouvert aux opportunités en maintenance, supply chain et amélioration continue.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-list reveal">
+        <a href="mailto:akweassoumou@gmail.com"><span class="k">Email</span><span>akweassoumou@gmail.com</span></a>
+        <a href="tel:+24177562219"><span class="k">Téléphone</span><span>077 56 22 19</span></a>
+        <a href="https://linkedin.com/in/fils-akwe" target="_blank" rel="noopener"><span class="k">LinkedIn</span><span>linkedin.com/in/fils‑akwe</span></a>
+        <div><span class="k">Localisation</span><span>Port‑Gentil, Ondimba — Gabon</span></div>
+      </div>
+      <div class="reveal">
+        <div class="note-box corner-frame">
+          <strong>Références professionnelles</strong><br>
+          Contacts chez Assala Gabon et Eramet‑Comilog disponibles sur demande, par respect de la confidentialité de mes anciens responsables.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-row">
+    <span>© 2026 AKWE ASSOUMOU Fils Gilbert‑Kayetan</span>
+    <span>Ingénieur Industriel — Port‑Gentil, Gabon</span>
+  </div>
+</footer>
+
+<script>
+const toggle = document.getElementById('navToggle');
+const links = document.getElementById('navLinks');
+toggle.addEventListener('click', () => links.classList.toggle('open'));
+links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+
+const revealEls = document.querySelectorAll('.reveal');
+if ('IntersectionObserver' in window) {
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => io.observe(el));
+} else {
+  revealEls.forEach(el => el.classList.add('show'));
+}
+</script>
+</body>
+</html>
